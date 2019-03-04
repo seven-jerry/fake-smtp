@@ -1,8 +1,38 @@
 FakeSMTP
 ========
 
-FakeSMTP is a Free Fake SMTP Server with GUI for testing emails in applications easily.
+FakeSMTP is a Free Fake SMTP Server with Docker image and GUI for testing emails in applications easily.
 It is written in Java.
+
+Docker Image
+------------
+
+You can use Fake SMTP Docker image to catch emails sent from your applications on development environment.
+
+To run via Docker:
+
+```
+docker run miladrahimi/fake-smtp:latest -p 2525:25
+```
+
+To run via Docker-compose:
+
+```
+...
+mail:
+    image: miladrahimi/fake-smtp
+    restart: always
+    working_dir: /output/
+    volumes:
+      - ./mails/:/output/
+    ports:
+      - 25
+...
+```
+
+
+GUI
+---
 
 <img src="http://nilhcem.github.com/FakeSMTP/images/screenshot_mac.png" width="664" height="463" />
 
