@@ -1,0 +1,12 @@
+{
+  "name": "Fake Smtp",
+  "version": "1",
+  "slug": "fake_smtp",
+  "description": "My first real add-on!",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "startup": "before",
+  "boot": "auto",
+  "options": {},
+  "schema": {},
+  "ports": {"25": "25"}
+}
